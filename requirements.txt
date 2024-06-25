@@ -3,7 +3,6 @@ bs4
 html5lib
 textstat
 nltk
-language_check
+language_tool_python
 textblob
-langdetect
 sphinx_rtd_theme

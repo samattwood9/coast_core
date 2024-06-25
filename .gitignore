@@ -6,6 +6,12 @@
 
 ### End of Ash adds
 
+### Sam Added
+### Because of using venv
+Scripts
+pyvenv.cfg
+### End of Sam adds
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -4,21 +4,12 @@ A collection of functions that can be used for analysing the clarity of writing 
 
 from textstat.textstat import textstat
 import nltk
-import language_check
+import language_tool_python #import language_check
 from textblob import TextBlob
-from langdetect import detect  # breaks the build
-
 
 def detect_language(text):
-    """
-    Given a body of text, will use the langdetect library to detect the text language and return.
-
-    :param text: The body of text to analyse.
-    :return: The language code (e.g. EN for English).
-    """
-    lang_code = detect(text)
-
-    return lang_code
+    blob = TextBlob(text)
+    return blob.detect_language()
 
 
 def analyse_readability_metrics(article_text):
@@ -119,14 +110,14 @@ def analyse_readability_metrics(article_text):
 
 def analyse_text_for_grammatical_metrics(article_text):
     """
-    Use the language_check library to check a body of text for grammatical issues.
+    Use the language_tool_python library to check a body of text for grammatical issues.
 
     :param article_text: The text to be analyse.
 
     :return: The total number of grammatical issues found. A list containing details of each grammatical issue. A list of sentences, tokenized by NLTK.
     """
     try:
-        tool = language_check.LanguageTool('en-US')
+        tool = language_tool_python.LanguageTool('en-US')
 
         sentences = nltk.sent_tokenize(article_text)
 
