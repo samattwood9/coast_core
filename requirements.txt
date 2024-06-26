@@ -6,3 +6,4 @@ nltk
 language_tool_python
 textblob
 sphinx_rtd_theme
+langid

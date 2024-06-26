@@ -1,15 +1,17 @@
 """
-A collection of functions that can be used for analysing the clarity of writing within an article
+A collection of functions that can be used for analysing the clarity
+of writing within an article.
 """
 
 from textstat.textstat import textstat
 import nltk
-import language_tool_python #import language_check
-from textblob import TextBlob
+import language_tool_python  # import language_check
+import langid
+
 
 def detect_language(text):
-    blob = TextBlob(text)
-    return blob.detect_language()
+    lang, confidence = langid.classify(text)
+    return lang
 
 
 def analyse_readability_metrics(article_text):

@@ -18,7 +18,8 @@ requirements = [
     "textstat",
     "nltk",
     "language-tool-python",
-    "textblob"
+    "textblob",
+    "langid"
 ]
 
 setup_requirements = []
