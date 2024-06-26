@@ -6,6 +6,7 @@ of writing within an article.
 from textstat.textstat import textstat
 import nltk
 import language_tool_python  # import language_check
+from textblob import TextBlob
 import langid
 
 
